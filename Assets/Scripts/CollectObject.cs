@@ -22,7 +22,7 @@ public class CollectObject : MonoBehaviour
         {
             interactInfo.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Destroy(gameObject);
                 interactInfo.SetActive(false);

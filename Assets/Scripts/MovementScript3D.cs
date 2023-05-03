@@ -6,6 +6,7 @@ public class MovementScript3D : MonoBehaviour
 {
     public Rigidbody MyRigidbody;
     private Camera mainCamera;
+    private Animator playerAnimator;
     
     public float MoveSpeed = 2f;
     
@@ -13,6 +14,7 @@ public class MovementScript3D : MonoBehaviour
     {
         mainCamera = Camera.main;
         MyRigidbody = GetComponent<Rigidbody>();
+        playerAnimator = GetComponent<Animator>();
 
         Application.targetFrameRate = 60;
     }
@@ -23,6 +25,9 @@ public class MovementScript3D : MonoBehaviour
 
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
+
+        playerAnimator.SetFloat("BlendX", movementInput.x);
+        playerAnimator.SetFloat("BlendY", movementInput.y);
 
         Move(movementInput);
     }
