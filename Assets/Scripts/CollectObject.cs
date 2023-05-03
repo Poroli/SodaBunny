@@ -6,6 +6,7 @@ public class CollectObject : MonoBehaviour
 {
     public GameObject player;
     public GameObject interactInfo;
+    public GameObject UIObject;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class CollectObject : MonoBehaviour
             {
                 Destroy(gameObject);
                 interactInfo.SetActive(false);
+                UIObject.SetActive(true);
             }
         }
     }
