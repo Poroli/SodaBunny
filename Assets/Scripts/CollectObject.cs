@@ -11,9 +11,9 @@ public class CollectObject : MonoBehaviour
     private void Awake()
     {
         player = GameObject.Find("Player");
-        interactInfo = GameObject.Find("CollectText");
+        interactInfo = GameObject.Find("InGame UI").transform.GetChild(0).gameObject;
 
-        interactInfo.SetActive(false);
+        //interactInfo.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
