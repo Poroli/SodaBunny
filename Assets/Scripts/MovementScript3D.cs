@@ -7,8 +7,12 @@ public class MovementScript3D : MonoBehaviour
     public Rigidbody MyRigidbody;
     private Camera mainCamera;
     private Animator playerAnimator;
-    
+
+    [SerializeField] private float turnSmoothTime;
     public float MoveSpeed = 2f;
+    private float targetAngle;
+    private float angle;
+    private float turnSmoothVelocity;
     
     private void Awake()
     {
@@ -26,17 +30,33 @@ public class MovementScript3D : MonoBehaviour
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
 
+        /*
         playerAnimator.SetFloat("BlendX", movementInput.x);
         playerAnimator.SetFloat("BlendY", movementInput.y);
-
+        */
+        if (movementInput.magnitude == 0)
+        {
+            return;
+        }
+        SetRotation(movementInput);
         Move(movementInput);
     }
 
+    private void SetRotation(Vector2 direction)
+    {
+        targetAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
+        angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+    }
 
     private void Move(Vector2 movementInput)
     {
         Vector3 newVelocity = MyRigidbody.velocity;
-
+        newVelocity = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+        newVelocity *= MoveSpeed;
+        newVelocity.y = MyRigidbody.velocity.y;
+        MyRigidbody.velocity = newVelocity;
+        /*
         newVelocity = CalculateHorizontalMovement(newVelocity, movementInput);
         
         newVelocity.y = MyRigidbody.velocity.y;
@@ -46,6 +66,7 @@ public class MovementScript3D : MonoBehaviour
         if (newVelocity.magnitude > 0)
         {
             transform.forward = GetCameraForward();
+        
         }
     }
 
@@ -65,13 +86,13 @@ public class MovementScript3D : MonoBehaviour
 
     public Vector3 GetCameraForward()
     {
-        Vector3 cameraForward = GetPlaneDirection(mainCamera.transform.forward);
+        Vector3 cameraForward = mainCamera.transform.forward;
         return cameraForward;
     }
 
     public Vector3 GetCameraSideward()
     {
-        Vector3 cameraSidewards = GetPlaneDirection(mainCamera.transform.right);
+        Vector3 cameraSidewards = mainCamera.transform.right;
         return cameraSidewards;
     }
 
@@ -80,5 +101,6 @@ public class MovementScript3D : MonoBehaviour
         vector.y = 0f;
         vector = vector.normalized;
         return vector;
+        */
     }
 }
