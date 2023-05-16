@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class CollectObject : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject interactInfo;
+    private GameObject player;
+    private GameObject interactInfo;
     public GameObject UIObject;
 
     private void Awake()
     {
         player = GameObject.Find("Player");
         interactInfo = GameObject.Find("InGame UI").transform.GetChild(0).gameObject;
+        
 
         //interactInfo.SetActive(false);
     }
