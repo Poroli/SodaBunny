@@ -14,6 +14,7 @@ public class MovementScript3D : MonoBehaviour
     private float targetAngle;
     private float angle;
     private float turnSmoothVelocity;
+    private bool walkSoundPlays;
     
     private void Awake()
     {
@@ -37,11 +38,15 @@ public class MovementScript3D : MonoBehaviour
         */
         if (movementInput.magnitude == 0)
         {
-            walkAudioSource.Stop();
             return;
         }
         SetRotation(movementInput);
-        walkAudioSource.Play();
+
+        if (!walkAudioSource.isPlaying)
+        {
+            walkAudioSource.Play();
+        }
+
         Move(movementInput);
     }
 

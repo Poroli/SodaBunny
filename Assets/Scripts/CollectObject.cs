@@ -9,6 +9,7 @@ public class CollectObject : MonoBehaviour
     private GameObject interactInfo;
     public GameObject UIObject;
 
+    private AudioSource collectItemAudioSource;
     private CreateCollectibles objectScript;
 
     private int count;
@@ -22,6 +23,8 @@ public class CollectObject : MonoBehaviour
         count = objectScript.count;
 
         //interactInfo.SetActive(false);
+    
+        collectItemAudioSource = GameObject.Find("ItemFound").GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -40,6 +43,8 @@ public class CollectObject : MonoBehaviour
                 Destroy(gameObject);
                 interactInfo.SetActive(false);
                 //UIObject.SetActive(true);
+
+                collectItemAudioSource.Play();
 
                 objectScript.uiImage[count].gameObject.transform.GetChild(1).gameObject.SetActive(true);
             }
