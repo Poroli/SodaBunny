@@ -1174,6 +1174,7 @@ MonoBehaviour:
   - {fileID: 287112568}
   - {fileID: 712558378}
   - {fileID: 110190286}
+  count: 0
   objects: 0
   objectToSpawn: {fileID: 0}
   collectedImage: {fileID: 0}

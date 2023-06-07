@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class CreateCollectibles : MonoBehaviour
 {
-    [SerializeField] private GameObject[] collectibleObjects;
+    [SerializeField] public GameObject[] collectibleObjects;
     [SerializeField] private Sprite[] objectImages;
-    [SerializeField] private Image[] uiImage;
+    [SerializeField] public Image[] uiImage;
+
+    public int count;
 
     public enum CollectObjects { Ball, BrickOne, BrickTwo, Book, Glass, Candle, Bowl, Plate }
 
@@ -25,6 +27,8 @@ public class CreateCollectibles : MonoBehaviour
         for (int i = 0; i < 8; i++)
         {
             objects = (CollectObjects)Random.Range(0, 7);
+
+            count = i;
 
             SetObjectsToName();
 
