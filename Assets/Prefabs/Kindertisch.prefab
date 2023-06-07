@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 832047036333667059}
   - component: {fileID: 2039448929261989833}
   - component: {fileID: 1339657100418513164}
-  - component: {fileID: 4273937833870075257}
   m_Layer: 0
   m_Name: Kindertisch
-  m_TagString: Untagged
+  m_TagString: DeBug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,17 +110,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3921036, y: 0.6, z: 0.8220471}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4273937833870075257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192603081984578342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6017bd788e43e64488a31575329d979c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 1.3921036, y: 0.64415115, z: 0.8385884}
+  m_Center: {x: 6.5107452e-18, y: -0.022075564, z: 0.008270651}
