@@ -10,8 +10,12 @@ public class MenueHandler : MonoBehaviour
 
     private void Awake()
     {
-        pauseMenue = GameObject.Find("Pausescreen");
+        if (!GameObject.Find("Pausescreen"))
+        {
+            return;
+        }
 
+        pauseMenue = GameObject.Find("Pausescreen");
         pauseMenue.SetActive(false);
     }
 
