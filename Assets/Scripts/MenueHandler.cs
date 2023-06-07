@@ -5,14 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MenueHandler : MonoBehaviour
 {
-    public GameObject PauseMenue;
+    private GameObject pauseMenue;
     public GameObject Options;
+
+    private void Awake()
+    {
+        pauseMenue = GameObject.Find("Pausescreen");
+
+        pauseMenue.SetActive(false);
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseMenue.SetActive(true);
+            pauseMenue.SetActive(true);
         }
     }
 
@@ -21,26 +28,26 @@ public class MenueHandler : MonoBehaviour
         SceneManager.LoadScene("Level_1");
     }
 
-    public void LoadGame()
+    public void ReloadGame()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OptionClick()
     {
-        PauseMenue.SetActive(false);
+        pauseMenue.SetActive(false);
         Options.SetActive(true);
     }
 
     public void Back()
     {
-        PauseMenue.SetActive(true);
+        pauseMenue.SetActive(true);
         Options.SetActive(false);
     }
 
     public void Resume()
     {
-        PauseMenue.SetActive(false);
+        pauseMenue.SetActive(false);
     }
 
     public void Leave()
