@@ -205,6 +205,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1648197120235043608}
+  - component: {fileID: 3463630854864219327}
+  - component: {fileID: 1270645316815108590}
   m_Layer: 0
   m_Name: Kinderstuhl
   m_TagString: Untagged
@@ -219,7 +221,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131401232179143074}
-  m_LocalRotation: {x: -0, y: -0.34156007, z: -0, w: 0.93986}
+  m_LocalRotation: {x: 0, y: -0.34156084, z: 0, w: 0.9398597}
   m_LocalPosition: {x: 4.629, y: 1.311, z: 3.213}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -231,8 +233,33 @@ Transform:
   - {fileID: 8279899279272874873}
   - {fileID: 4016905381251767748}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -39.944, z: 0}
+--- !u!65 &3463630854864219327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131401232179143074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.384511, y: 0.5908569, z: 0.38484192}
+  m_Center: {x: 0.00088977814, y: -0.017723143, z: 0.0008032322}
+--- !u!114 &1270645316815108590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131401232179143074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6017bd788e43e64488a31575329d979c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4983039315429327183
 GameObject:
   m_ObjectHideFlags: 0
