@@ -45,7 +45,7 @@ public class MenueHandler : MonoBehaviour
 
     public void Leave()
     {
-        SceneManager.LoadScene("StartScreen");
+        SceneManager.LoadScene("MainMenue");
     }
 
     public void Quit()

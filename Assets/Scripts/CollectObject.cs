@@ -10,6 +10,7 @@ public class CollectObject : MonoBehaviour
     public GameObject UIObject;
 
     private CreateCollectibles objectScript;
+    private Winning winScript;
 
     private int count;
 
@@ -18,6 +19,7 @@ public class CollectObject : MonoBehaviour
         player = GameObject.Find("Player");
         interactInfo = GameObject.Find("InGame UI").transform.GetChild(0).gameObject;
         objectScript = GameObject.Find("SpawnHandler").GetComponent<CreateCollectibles>();
+        winScript = GameObject.Find("MenueHandler").GetComponent<Winning>();
 
         count = objectScript.count;
 
@@ -40,6 +42,8 @@ public class CollectObject : MonoBehaviour
                 Destroy(gameObject);
                 interactInfo.SetActive(false);
                 //UIObject.SetActive(true);
+
+                winScript.AddScore();
 
                 objectScript.uiImage[count].gameObject.transform.GetChild(1).gameObject.SetActive(true);
             }
