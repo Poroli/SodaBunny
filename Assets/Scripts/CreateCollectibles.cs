@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class CreateCollectibles : MonoBehaviour
 {
-    [SerializeField] private GameObject[] spawnableObjects;
+    [SerializeField] public GameObject[] collectibleObjects;
     [SerializeField] private Sprite[] objectImages;
-    [SerializeField] private Image[] uiImage;
+    [SerializeField] public Image[] uiImage;
+
+    public int count;
 
     public enum CollectObjects { Ball, BrickOne, BrickTwo, Book, Glass, Candle, Bowl, Plate }
 
@@ -26,6 +28,8 @@ public class CreateCollectibles : MonoBehaviour
         {
             objects = (CollectObjects)Random.Range(0, 7);
 
+            count = i;
+
             SetObjectsToName();
 
             Instantiate(objectToSpawn, new Vector3(Random.Range(-4.5f, 4.5f), 1.5f, Random.Range(-4.5f, 4.5f)), Quaternion.identity);
@@ -37,49 +41,49 @@ public class CreateCollectibles : MonoBehaviour
     {
         if (objects == CollectObjects.Ball)
         {
-            objectToSpawn = spawnableObjects[0];
+            objectToSpawn = collectibleObjects[0];
             collectedImage = objectImages[0];
         }
 
         if (objects == CollectObjects.Book)
         {
-            objectToSpawn = spawnableObjects[1];
+            objectToSpawn = collectibleObjects[1];
             collectedImage = objectImages[1];
         }
 
         if (objects == CollectObjects.Bowl)
         {
-            objectToSpawn = spawnableObjects[2];
+            objectToSpawn = collectibleObjects[2];
             collectedImage = objectImages[2];
         }
 
         if (objects == CollectObjects.BrickOne)
         {
-            objectToSpawn = spawnableObjects[3];
+            objectToSpawn = collectibleObjects[3];
             collectedImage = objectImages[3];
         }
 
         if (objects == CollectObjects.BrickTwo)
         {
-            objectToSpawn = spawnableObjects[4];
+            objectToSpawn = collectibleObjects[4];
             collectedImage = objectImages[4];
         }
 
         if (objects == CollectObjects.Candle)
         {
-            objectToSpawn = spawnableObjects[5];
+            objectToSpawn = collectibleObjects[5];
             collectedImage = objectImages[5];
         }
 
         if (objects == CollectObjects.Glass)
         {
-            objectToSpawn = spawnableObjects[6];
+            objectToSpawn = collectibleObjects[6];
             collectedImage = objectImages[6];
         }
 
         if (objects == CollectObjects.Plate)
         {
-            objectToSpawn = spawnableObjects[7];
+            objectToSpawn = collectibleObjects[7];
             collectedImage = objectImages[7];
         }
     }

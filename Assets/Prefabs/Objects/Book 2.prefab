@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -776779104985249348}
   - component: {fileID: -8572335664346044794}
   - component: {fileID: 7588602544249226474}
-  - component: {fileID: -5519670535964796848}
+  - component: {fileID: 1202229382995296947}
   m_Layer: 0
   m_Name: Book 2
   m_TagString: Untagged
@@ -130,7 +130,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5519670535964796848
+--- !u!114 &1202229382995296947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,9 +139,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1775884161187368718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7545a82633c16348be4fffc31b378c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6017bd788e43e64488a31575329d979c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  interactInfo: {fileID: 0}
-  UIObject: {fileID: 0}

@@ -404,8 +404,9 @@ GameObject:
   - component: {fileID: -4890599764251851879}
   - component: {fileID: 8639328560095147161}
   - component: {fileID: 5200767638383575301}
+  - component: {fileID: -4416791195623487332}
   m_Layer: 0
-  m_Name: Brick 2 3
+  m_Name: Brick Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,6 +478,18 @@ MonoBehaviour:
   player: {fileID: 0}
   interactInfo: {fileID: 0}
   UIObject: {fileID: 0}
+--- !u!114 &-4416791195623487332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485853363450761750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6017bd788e43e64488a31575329d979c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4445892899881537227
 GameObject:
   m_ObjectHideFlags: 0

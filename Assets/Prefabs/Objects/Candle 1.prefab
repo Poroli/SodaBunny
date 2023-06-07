@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4412328670906084510}
   - component: {fileID: 8563342674017010860}
   - component: {fileID: 356748141548888248}
-  - component: {fileID: -5003479901766064239}
+  - component: {fileID: -585011762187367458}
   m_Layer: 0
   m_Name: Candle 1
   m_TagString: Untagged
@@ -163,7 +163,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5003479901766064239
+--- !u!114 &-585011762187367458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,12 +172,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3922755263656932900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7545a82633c16348be4fffc31b378c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6017bd788e43e64488a31575329d979c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  interactInfo: {fileID: 0}
-  UIObject: {fileID: 0}
 --- !u!1 &7367102077992040878
 GameObject:
   m_ObjectHideFlags: 0
