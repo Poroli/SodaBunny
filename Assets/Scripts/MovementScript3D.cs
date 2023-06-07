@@ -9,6 +9,7 @@ public class MovementScript3D : MonoBehaviour
     private Animator playerAnimator;
 
     [SerializeField] private float turnSmoothTime;
+    [SerializeField] private AudioSource walkAudioSource;
     public float MoveSpeed = 2f;
     private float targetAngle;
     private float angle;
@@ -36,9 +37,11 @@ public class MovementScript3D : MonoBehaviour
         */
         if (movementInput.magnitude == 0)
         {
+            walkAudioSource.Stop();
             return;
         }
         SetRotation(movementInput);
+        walkAudioSource.Play();
         Move(movementInput);
     }
 

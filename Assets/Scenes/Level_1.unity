@@ -3566,6 +3566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyRigidbody: {fileID: 0}
   turnSmoothTime: 0.1
+  walkAudioSource: {fileID: 906606715}
   MoveSpeed: 2
 --- !u!54 &795071212
 Rigidbody:
@@ -7887,7 +7888,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036932685}
-  m_LocalRotation: {x: 0.17471257, y: -0.37577853, z: 0.07236833, w: 0.9072094}
+  m_LocalRotation: {x: 0.17471255, y: -0.3757785, z: 0.07236832, w: 0.9072094}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
