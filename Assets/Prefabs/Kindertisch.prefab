@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3200072616048412217}
   - component: {fileID: 832047036333667059}
   - component: {fileID: 2039448929261989833}
+  - component: {fileID: 1339657100418513164}
   m_Layer: 0
   m_Name: Kindertisch
-  m_TagString: Untagged
+  m_TagString: DeBug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &3200072616048412217
 MeshFilter:
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4169456097206242546, guid: de0f53e7396c9eb42993fb457891d32e, type: 3}
+--- !u!65 &1339657100418513164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192603081984578342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3921036, y: 0.64415115, z: 0.8385884}
+  m_Center: {x: 6.5107452e-18, y: -0.022075564, z: 0.008270651}

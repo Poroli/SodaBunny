@@ -107,9 +107,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 900666903136978181}
+  - component: {fileID: 398344155129962673}
   m_Layer: 0
   m_Name: Kinderbett
-  m_TagString: Untagged
+  m_TagString: DeBug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,8 +154,21 @@ Transform:
   - {fileID: 4391093596835523347}
   - {fileID: 146468761668868696}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &398344155129962673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519074398739505087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4156461, y: 0.9058262, z: 0.7815702}
+  m_Center: {x: -0.0027489662, y: -0.0027351975, z: -0.001411438}
 --- !u!1 &714752262467234731
 GameObject:
   m_ObjectHideFlags: 0
